@@ -1,3 +1,3 @@
-# group_project
+# sept_group_project
 
-this is from group 12
+This is from Group 6 of Software Engineering: Process and Tools.
