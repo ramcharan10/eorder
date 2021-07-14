@@ -25,9 +25,9 @@ public class AllService {
         this.sessionFactory = sessionFactory;
     }
 
-    public Product saveProduct(Product product){
-        sessionFactory.getCurrentSession().save(product);
-        return product;
+    public Food saveFood(Food food){
+        sessionFactory.getCurrentSession().save(food);
+        return food;
     }
 
 

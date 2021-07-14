@@ -3,11 +3,11 @@ package controller;
 import model.Product;
 import model.Receipt;
 import model.ReceiptDetail;
-import model.Student;
+import model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import service.AllService;
-import service.StudentService;
+import service.CustomerService;
 
 import java.util.List;
 

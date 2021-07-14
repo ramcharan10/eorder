@@ -7,8 +7,8 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "student")
-public class Student {
+@Table(name = "food")
+public class Food {
 
     @Id
     @Column
@@ -18,7 +18,7 @@ public class Student {
     @Column
     private String name;
 
-    public Student() {
+    public Food() {
     }
 
     public int getId() {

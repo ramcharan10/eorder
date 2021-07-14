@@ -25,7 +25,7 @@ public class ReceiptDetail {
     private Receipt receipt;
 
     @ManyToOne
-    private Product product;
+    private Food food;
 
     @Column
     private int quantity;
@@ -66,11 +66,11 @@ public class ReceiptDetail {
         this.price = price;
     }
 
-    public Product getProduct() {
-        return product;
+    public Food getFood() {
+        return food;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setFood(Food product) {
+        this.food = food;
     }
 }

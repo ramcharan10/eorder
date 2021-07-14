@@ -8,7 +8,7 @@ import javax.persistence.*;
  * Created by CoT on 6/18/18.
  */
 @Entity
-public class Teacher {
+public class FoodOrderingManager {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class Teacher {
     private String name;
 
 
-    public Teacher() {
+    public FoodOrderingManager() {
     }
 
     public int getId() {
