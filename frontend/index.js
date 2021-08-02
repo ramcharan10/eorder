@@ -1032,26 +1032,26 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 /* Add an orangered background color to the top navigation bar */
 var topnav = {
     overflow: 'hidden',
-    backgroundColor: 'orangered'
+    backgroundColor: 'red'
 
     /* Style the links (Logo) inside the navigation bar */
 };var topnav_a = {
     float: 'left',
     display: 'block',
-    paddingTop: '5px',
-    paddingBottom: '5px',
-    paddingLeft: '0px',
-    paddingRight: '5px'
+    paddingTop: '10px',
+    paddingBottom: '10px',
+    paddingLeft: '5px',
+    paddingRight: '10px'
 
     /* Style the links (Product types) inside the navigation bar*/
 };var topnav_a_active = {
     display: 'block',
-    color: 'black',
+    color: 'yellow',
     textAlign: 'center',
-    padding: '17px 16px',
+    padding: '19px 18px',
     float: 'left',
     textDecoration: 'none',
-    fontSize: '20px'
+    fontSize: '30px'
 };
 
 var TopNav = function (_React$Component) {
@@ -1082,22 +1082,22 @@ var TopNav = function (_React$Component) {
                             _react2.default.createElement(
                                 'a',
                                 { href: 'index.html', style: topnav_a },
-                                _react2.default.createElement('img', { src: 'logo.png', alt: 'Randotech' })
+                                _react2.default.createElement('img', { src: 'logo.png', alt: 'RMIT' })
                             ),
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
                                 { to: '/Admin', style: topnav_a_active },
-                                'Admin (Products)'
+                                'Admin'
                             ),
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
-                                { to: '/AdminPT', style: topnav_a_active },
-                                'Admin (Product Types)'
+                                { to: '/Food', style: topnav_a_active },
+                                'Food'
                             ),
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
-                                { to: '/ProductsPage', style: topnav_a_active },
-                                'Customer'
+                                { to: '/HomePage', style: topnav_a_active },
+                                'Homepage'
                             )
                         ),
                         _react2.default.createElement('div', { className: 'col-md-1' })
@@ -1159,12 +1159,9 @@ var Admin = function (_React$Component) {
             products: [],
             id: '',
             name: '',
+            imageURL: '',
             price: '',
             description: '',
-            brand: '',
-            producer: '',
-            imageURL: '',
-            productTypeId: '',
             addNew: true
         };
         return _this;
@@ -1224,12 +1221,9 @@ var Admin = function (_React$Component) {
         value: function edit(id, name, price, description, brand, producer, imageURL, productTypeId) {
             this.setState({ id: id,
                 name: name,
-                price: price,
-                description: description,
-                brand: brand,
-                producer: producer,
-                imageURL: imageURL,
-                productTypeId: productTypeId,
+                imageURL: '',
+                price: '',
+                description: '',
                 addNew: false });
         }
     }, {
@@ -1422,12 +1416,9 @@ var ProductGrid = function (_React$Component) {
             products: [],
             id: '',
             name: '',
+            imageURL: '',
             price: '',
             description: '',
-            brand: '',
-            producer: '',
-            imageURL: '',
-            productTypeId: '',
             addNew: true
         };
         return _this;
@@ -1443,7 +1434,7 @@ var ProductGrid = function (_React$Component) {
                 return res.json();
             }).then(function (json) {
                 return _this2.setState({ products: json.filter(function (p) {
-                        return String(p.id).startsWith("s3757330");
+                        return String(p.id).startsWith("s3740929");
                     }) });
             });
         }
@@ -1614,14 +1605,11 @@ var ProductDetails = function (_React$Component) {
             products: [],
             id: '',
             name: '',
+            imageURL: '',
             price: '',
             description: '',
-            brand: '',
-            producer: '',
-            imageURL: '',
-            localImageURL: '',
-            productTypeId: '',
             addNew: true
+            
         };
         return _this;
     }
@@ -1820,12 +1808,9 @@ var ProductList = function (_React$Component) {
             products: [],
             id: '',
             name: '',
+            imageURL: '',
             price: '',
             description: '',
-            brand: '',
-            producer: '',
-            imageURL: '',
-            productTypeId: '',
             addNew: true
         };
         return _this;
