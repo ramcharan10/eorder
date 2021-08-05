@@ -23,7 +23,7 @@ public class ProductList {
     @Column
     private String description;
 
-    public int getId() {
+	public int getId() {
         return id;
     }
 
@@ -54,5 +54,14 @@ public class ProductList {
     public void setPrice(double price) {
         this.price = price;
     }
+    
+    public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
     
 }
