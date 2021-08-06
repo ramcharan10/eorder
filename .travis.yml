@@ -1,0 +1,19 @@
+language: java
+jdk:
+- openjdk10
+- openjdk11
+
+sudo: false
+
+cache:
+  directories:
+  - $HOME/.m2
+  - $HOME/.gradle
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: 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
+  keep_history: true
+  on:
+    branch: main
