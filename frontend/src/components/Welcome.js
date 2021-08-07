@@ -3,10 +3,12 @@ import React from "react";
 const Welcome = () => {
   return (
     <div>
-      <h1>Online Ordering Food</h1>
-      <br/>
-      <h5><b>Happy Food Day</b></h5>
-      <br/>
+      <h1>Online Food Ordering System</h1>
+      <br />
+      <h5>
+        <b>Let's Get Ordering!</b>
+      </h5>
+      <br />
     </div>
   );
 };
