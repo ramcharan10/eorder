@@ -1,4 +1,6 @@
-To run the application or the front-end of it:
+To run the application on the front-end of it:
+
+### `cd` to front-end folder
 
 ### `npm start`
 
