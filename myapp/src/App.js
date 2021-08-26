@@ -20,7 +20,7 @@ class App extends Component {
 
     this.state = {
       currentUser: undefined,
-      showAdminBoard: false.
+      showAdminBoard: false,
     };
   }
 
@@ -77,14 +77,14 @@ class App extends Component {
           </div>
 
           {showAdminBoard && (
-              <li className="nav-item">
-                <Link to={"/admin"} className="nav-link">
-                  Admin Board
-                </Link>
-              </li>
-            )}
+            <li className="nav-item">
+              <Link to={"/admin"} className="nav-link">
+                Admin Board
+              </Link>
+            </li>
+          )}
 
-{currentUser ? (
+          {currentUser ? (
             <div className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link to={"/profile"} className="nav-link">

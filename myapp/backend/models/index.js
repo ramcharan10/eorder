@@ -11,6 +11,6 @@ db.role = require("./role.model");
 
 db.ROLES = ["user", "admin"];
 db.url = dbConfig.url;
-db.information = require("./info.model.js")(mongoose);
+db.information = require("./product.model.js")(mongoose);
 
 module.exports = db;
