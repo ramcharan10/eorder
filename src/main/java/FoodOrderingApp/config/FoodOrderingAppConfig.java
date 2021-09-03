@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import FoodOrderingApp.model.Category;
 import FoodOrderingApp.model.Product;
 import FoodOrderingApp.model.Supplier;
+import FoodOrderingApp.model.UserDetail;
 
 @Configuration
 @EnableTransactionManagement
@@ -57,6 +58,7 @@ public class FoodOrderingAppConfig {
 		localFactory.addAnnotatedClass(Category.class);
 		localFactory.addAnnotatedClass(Product.class);
 		localFactory.addAnnotatedClass(Supplier.class);
+		localFactory.addAnnotatedClass(UserDetail.class);
 		
 		System.out.println("--------SessionFactory Object is Created.--------");
 		
