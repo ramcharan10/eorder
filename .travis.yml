@@ -1,0 +1,9 @@
+language: java
+jdk:
+- openjdk10
+- openjdk11
+os:
+- linux
+dist: trusty
+script:
+- python -m pytest -v
