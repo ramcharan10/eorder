@@ -3,8 +3,7 @@ arch: amd64
 sudo: required
 language: java
 jdk:
-- openjdk10
-- openjdk11
+- oraclejdk16
 os:
 - linux
 - osx
@@ -14,5 +13,7 @@ cache:
 
 script:
   - java --version
-  - ./mvn clean install
-  - ./mvn test
+  - mvn clean install
+  - ./mvnw clean install
+  - mvn test -B
+  - ./mvnw test -B
