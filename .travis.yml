@@ -11,6 +11,8 @@ cache:
   - $HOME/.m2
 before_install:
   - git update-index --chmod=+x mvnw
+install:
+  - mvn -N io.takari:maven:wrapper
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
-  - java --version
-  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvn test
