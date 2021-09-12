@@ -1,11 +1,6 @@
-arch: amd64
 language: java
 jdk:
 - oraclejdk16
-os:
-- linux
-- osx
-dist: xenial
 cache:
   directories:
   - $HOME/.m2
@@ -13,6 +8,6 @@ before_install:
   - git update-index --chmod=+x mvnw
 install:
   - mvn -N io.takari:maven:wrapper
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
   - mvn test
