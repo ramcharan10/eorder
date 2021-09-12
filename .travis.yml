@@ -1,16 +1,16 @@
 arch: amd64
-
-sudo: false
 language: java
 jdk:
 - oraclejdk16
 os:
 - linux
 - osx
+dist: xenial
 cache:
   directories:
   - $HOME/.m2
-
+before_install:
+  - git update-index --chmod=+x mvnw
 script:
   - java --version
-  - ./mvnw clean verify
+  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
