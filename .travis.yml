@@ -1,9 +1,11 @@
+sudo: required
 language: java
 jdk:
 - openjdk10
 - openjdk11
 os:
 - linux
-dist: trusty
+- windows
+- osx
 script:
-- python -m pytest -v
+  - ./mvnw clean install
