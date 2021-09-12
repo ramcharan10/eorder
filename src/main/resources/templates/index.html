@@ -11,7 +11,108 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>Document</title>
-    
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica", sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .slider-container{
+            height: 80%;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .menu {
+            position: absolute;
+            left: 0;
+            z-index: 900;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .menu label {
+            cursor: pointer;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            border-radius: 50px;
+            margin: 0 .2em 1em;
+        &:hover {
+             background: red;
+         }
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            z-index: 10;
+            padding: 8em 1em 0;
+            background-size: cover;
+            background-position: 50% 50%;
+            transition: left 0s .75s;
+        }
+
+        [id^="slide"]:checked + .slide {
+            left: 0;
+            z-index: 100;
+            transition: left .65s ease-out;
+        }
+
+        .slide-1 {
+            background-image: url("https://source.unsplash.com/c3esWyvW3E4/1600x900");
+        }
+        .slide-2 {
+            background-image: url("https://source.unsplash.com/dQwjHPp60bw/1600x900");
+        }
+        .slide-3 {
+            background-image: url("https://source.unsplash.com/x7-h2yuZVRs/1600x900");
+        }
+
+
+
+
+
+
+        @keyframes fade {
+            0% {opacity: 1; transform: scale(0);}
+            50% {opacity: 1; transform: scale(1);}
+            100% {opacity: 0;}
+        }
+
+
+        .with-shadow {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35), 0 1px 1px 0 rgba(0, 0, 0, 0.59);
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+
+        .raise-button:hover {
+            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.3), 0 15px 15px 0 rgba(0, 0, 0, 0.4);
+            background-color: #FFF !important;
+            color: #222 !important;
+        }
+
+        .raise-button:active {
+            -webkit-transition: 0.05s ease-out;
+            transition: 0.05s ease-out;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.44), 0 1px 1px 0 rgba(0, 0, 0, 0.68);
+            z-index: 10000;
+        }
+    </style>
 </head>
 <body>
 
@@ -51,6 +152,32 @@
         </div>
     </div>
 </nav>
+
+
+
+<div class="slider-container">
+    <div class="menu">
+        <label for="slide-dot-1"></label>
+        <label for="slide-dot-2"></label>
+        <label for="slide-dot-3"></label>
+    </div>
+
+    <input id="slide-dot-1" type="radio" name="slides" checked>
+    <div class="slide slide-1">
+        <div class="text"><button class="raise-button" style="background-color: black; color: white;"><a href="@{/shop}">Order Now!</a></button></div>
+    </div>
+
+    <input id="slide-dot-2" type="radio" name="slides">
+    <div class="slide slide-2">
+        <div class="text"><button class="raise-button" style="background-color: black; color: white;"><a href="@{/shop}">Order Now!</a></button></div>
+    </div>
+
+    <input id="slide-dot-3" type="radio" name="slides">
+    <div class="slide slide-3">
+        <div class="text"><button class="raise-button" style="background-color: black; color: white;"><a href="@{/shop}">Order Now!</a></button></div>
+    </div>
+</div>
+
 
 
 
